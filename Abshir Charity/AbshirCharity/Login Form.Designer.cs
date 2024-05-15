@@ -117,8 +117,10 @@
             Controls.Add(button1);
             Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4);
             Name = "Login_Form";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             Load += Login_Form_Load;
             ResumeLayout(false);

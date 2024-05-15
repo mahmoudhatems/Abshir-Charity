@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             panel1 = new Panel();
+            Exitbutt = new Button();
             monthly = new Button();
             cases = new Button();
             Donorsbutt = new Button();
             pictureBox1 = new PictureBox();
             Mainpanl = new Panel();
-            Exitbutt = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -54,6 +54,18 @@
             panel1.Size = new Size(300, 709);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
+            // 
+            // Exitbutt
+            // 
+            Exitbutt.FlatStyle = FlatStyle.Flat;
+            Exitbutt.ForeColor = Color.Maroon;
+            Exitbutt.Location = new Point(12, 12);
+            Exitbutt.Name = "Exitbutt";
+            Exitbutt.Size = new Size(48, 40);
+            Exitbutt.TabIndex = 0;
+            Exitbutt.Text = "X";
+            Exitbutt.UseVisualStyleBackColor = true;
+            Exitbutt.Click += Exitbutt_Click;
             // 
             // monthly
             // 
@@ -119,18 +131,6 @@
             Mainpanl.TabIndex = 2;
             Mainpanl.Paint += Mainpanl_Paint;
             // 
-            // Exitbutt
-            // 
-            Exitbutt.FlatStyle = FlatStyle.Flat;
-            Exitbutt.ForeColor = Color.Maroon;
-            Exitbutt.Location = new Point(12, 12);
-            Exitbutt.Name = "Exitbutt";
-            Exitbutt.Size = new Size(48, 40);
-            Exitbutt.TabIndex = 0;
-            Exitbutt.Text = "X";
-            Exitbutt.UseVisualStyleBackColor = true;
-            Exitbutt.Click += Exitbutt_Click;
-            // 
             // Home
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -139,6 +139,7 @@
             Controls.Add(Mainpanl);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Home";
             Text = "Home";
             panel1.ResumeLayout(false);

@@ -87,6 +87,7 @@
             assistanceid.Name = "assistanceid";
             assistanceid.Size = new Size(211, 27);
             assistanceid.TabIndex = 2;
+            assistanceid.TextChanged += assistanceid_TextChanged;
             // 
             // caseid
             // 
@@ -94,6 +95,7 @@
             caseid.Name = "caseid";
             caseid.Size = new Size(211, 27);
             caseid.TabIndex = 4;
+            caseid.TextChanged += caseid_TextChanged;
             // 
             // label3
             // 
@@ -111,6 +113,7 @@
             AssistanceAmount.Name = "AssistanceAmount";
             AssistanceAmount.Size = new Size(211, 27);
             AssistanceAmount.TabIndex = 6;
+            AssistanceAmount.TextChanged += AssistanceAmount_TextChanged;
             // 
             // label4
             // 
@@ -128,6 +131,7 @@
             monthnotes.Name = "monthnotes";
             monthnotes.Size = new Size(250, 27);
             monthnotes.TabIndex = 12;
+            monthnotes.TextChanged += monthnotes_TextChanged;
             // 
             // label5
             // 
@@ -145,6 +149,7 @@
             monthtype.Name = "monthtype";
             monthtype.Size = new Size(250, 27);
             monthtype.TabIndex = 10;
+            monthtype.TextChanged += monthtype_TextChanged;
             // 
             // label6
             // 
@@ -173,6 +178,7 @@
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(250, 27);
             dateTimePicker1.TabIndex = 13;
+            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
             // 
             // savebutt
             // 
@@ -186,6 +192,7 @@
             savebutt.TabIndex = 14;
             savebutt.Text = "Save";
             savebutt.UseVisualStyleBackColor = false;
+            savebutt.Click += savebutt_Click;
             // 
             // updatebutt
             // 
@@ -199,6 +206,7 @@
             updatebutt.TabIndex = 15;
             updatebutt.Text = "Update";
             updatebutt.UseVisualStyleBackColor = false;
+            updatebutt.Click += updatebutt_Click;
             // 
             // deletebutt
             // 
@@ -212,6 +220,7 @@
             deletebutt.TabIndex = 16;
             deletebutt.Text = "Delete";
             deletebutt.UseVisualStyleBackColor = false;
+            deletebutt.Click += deletebutt_Click;
             // 
             // dataGridView1
             // 

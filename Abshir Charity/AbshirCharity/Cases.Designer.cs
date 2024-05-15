@@ -31,7 +31,7 @@
             dateTimePicker1 = new DateTimePicker();
             casecomment = new TextBox();
             label9 = new Label();
-            service = new TextBox();
+            AssistanceProvided = new TextBox();
             label10 = new Label();
             status = new TextBox();
             label11 = new Label();
@@ -64,6 +64,7 @@
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(211, 27);
             dateTimePicker1.TabIndex = 90;
+            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
             // 
             // casecomment
             // 
@@ -72,6 +73,7 @@
             casecomment.Name = "casecomment";
             casecomment.Size = new Size(211, 25);
             casecomment.TabIndex = 85;
+            casecomment.TextChanged += casecomment_TextChanged;
             // 
             // label9
             // 
@@ -83,13 +85,14 @@
             label9.TabIndex = 84;
             label9.Text = "Comment";
             // 
-            // service
+            // AssistanceProvided
             // 
-            service.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
-            service.Location = new Point(513, 265);
-            service.Name = "service";
-            service.Size = new Size(211, 25);
-            service.TabIndex = 83;
+            AssistanceProvided.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
+            AssistanceProvided.Location = new Point(513, 265);
+            AssistanceProvided.Name = "AssistanceProvided";
+            AssistanceProvided.Size = new Size(211, 25);
+            AssistanceProvided.TabIndex = 83;
+            AssistanceProvided.TextChanged += AssistanceProvided_TextChanged;
             // 
             // label10
             // 
@@ -97,9 +100,9 @@
             label10.Font = new Font("Segoe UI Emoji", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label10.Location = new Point(389, 266);
             label10.Name = "label10";
-            label10.Size = new Size(56, 20);
+            label10.Size = new Size(90, 20);
             label10.TabIndex = 82;
-            label10.Text = "Service";
+            label10.Text = "AssProvided";
             // 
             // status
             // 
@@ -108,6 +111,7 @@
             status.Name = "status";
             status.Size = new Size(211, 25);
             status.TabIndex = 81;
+            status.TextChanged += status_TextChanged;
             // 
             // label11
             // 
@@ -146,6 +150,7 @@
             casedescip.Name = "casedescip";
             casedescip.Size = new Size(211, 25);
             casedescip.TabIndex = 74;
+            casedescip.TextChanged += casedescip_TextChanged;
             // 
             // label7
             // 
@@ -164,6 +169,7 @@
             casetype.Name = "casetype";
             casetype.Size = new Size(211, 25);
             casetype.TabIndex = 72;
+            casetype.TextChanged += casetype_TextChanged;
             // 
             // applicantinfo
             // 
@@ -172,6 +178,7 @@
             applicantinfo.Name = "applicantinfo";
             applicantinfo.Size = new Size(211, 25);
             applicantinfo.TabIndex = 70;
+            applicantinfo.TextChanged += applicantinfo_TextChanged;
             // 
             // label4
             // 
@@ -190,6 +197,7 @@
             applicantname.Name = "applicantname";
             applicantname.Size = new Size(211, 25);
             applicantname.TabIndex = 68;
+            applicantname.TextChanged += applicantname_TextChanged;
             // 
             // label3
             // 
@@ -208,6 +216,7 @@
             caseid.Name = "caseid";
             caseid.Size = new Size(211, 25);
             caseid.TabIndex = 62;
+            caseid.TextChanged += caseid_TextChanged;
             // 
             // label1
             // 
@@ -238,6 +247,7 @@
             dataGridView1.RowTemplate.Height = 29;
             dataGridView1.Size = new Size(719, 188);
             dataGridView1.TabIndex = 66;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // deletebutt
             // 
@@ -251,6 +261,7 @@
             deletebutt.TabIndex = 65;
             deletebutt.Text = "Delete";
             deletebutt.UseVisualStyleBackColor = false;
+            deletebutt.Click += deletebutt_Click;
             // 
             // updatebutt
             // 
@@ -264,6 +275,7 @@
             updatebutt.TabIndex = 64;
             updatebutt.Text = "Update";
             updatebutt.UseVisualStyleBackColor = false;
+            updatebutt.Click += updatebutt_Click;
             // 
             // savebutt
             // 
@@ -277,6 +289,7 @@
             savebutt.TabIndex = 63;
             savebutt.Text = "Save";
             savebutt.UseVisualStyleBackColor = false;
+            savebutt.Click += savebutt_Click;
             // 
             // dateTimePicker2
             // 
@@ -284,6 +297,7 @@
             dateTimePicker2.Name = "dateTimePicker2";
             dateTimePicker2.Size = new Size(211, 27);
             dateTimePicker2.TabIndex = 91;
+            dateTimePicker2.ValueChanged += dateTimePicker2_ValueChanged;
             // 
             // label2
             // 
@@ -315,7 +329,7 @@
             Controls.Add(dateTimePicker1);
             Controls.Add(casecomment);
             Controls.Add(label9);
-            Controls.Add(service);
+            Controls.Add(AssistanceProvided);
             Controls.Add(label10);
             Controls.Add(status);
             Controls.Add(label11);
@@ -337,6 +351,7 @@
             Controls.Add(savebutt);
             Name = "Cases";
             Size = new Size(771, 709);
+            Load += Cases_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -349,7 +364,7 @@
         private DateTimePicker dateTimePicker1;
         private TextBox casecomment;
         private Label label9;
-        private TextBox service;
+        private TextBox AssistanceProvided;
         private Label label10;
         private TextBox status;
         private Label label11;
